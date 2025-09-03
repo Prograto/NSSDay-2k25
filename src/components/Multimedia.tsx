@@ -5,6 +5,8 @@ import independence from '../images/independence.png'
 import nssday from '../images/nssday.png'
 import republicday from '../images/republicday.png'
 import nsspost from '../images/nsspost.png'
+import colab from '../images/colab.png'
+import guest from '../images/guest.png'
 
 const Multimedia: React.FC = () => {
   const highlights = [
@@ -29,14 +31,14 @@ const Multimedia: React.FC = () => {
       url: republicday
     },
     {
-      title: "Cultural Preservation",
-      description: "Promoting local arts, crafts, and traditional knowledge",
-      url: "https://images.pexels.com/photos/6646969/pexels-photo-6646969.jpeg?auto=compress&cs=tinysrgb&w=500&h=375&dpr=1"
+      title: "NSS & NCC Colab",
+      description: "Collaborative initiatives between NSS and NCC for community service",
+      url: colab
     },
     {
-      title: "Digital Literacy Program",
-      description: "Teaching basic computer skills to rural communities",
-      url: ""
+      title: "Shri M. Ramakrishna",
+      description: "Regional Director for the National Service Scheme (NSS) Andhra Pradesh and Telangana",
+      url: guest
     }
   ];
 

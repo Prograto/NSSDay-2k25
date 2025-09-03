@@ -92,13 +92,13 @@ const Contact: React.FC = () => {
                 <div className="p-4 bg-gradient-to-r from-orange-50 to-green-50 rounded-xl">
                   <h4 className="font-semibold text-gray-800">Mr. V. Manikyalarao</h4>
                   <p className="text-sm text-gray-600">NSS Programme Officer - I</p>
-                  <p className="text-sm text-orange-600">manikyalarao.nss@swarnandhra.ac.in</p>
+                  <p className="text-sm text-orange-600">manikyalarao@swarnandhra.ac.in</p>
                 </div>
                 
                 <div className="p-4 bg-gradient-to-r from-green-50 to-orange-50 rounded-xl">
                   <h4 className="font-semibold text-gray-800">Mr. K. Krishnamohan</h4>
                   <p className="text-sm text-gray-600">NSS Programme Officer - II</p>
-                  <p className="text-sm text-green-600">krishnamohan.nss@swarnandhra.ac.in</p>
+                  <p className="text-sm text-green-600">krishnamohan@swarnandhra.ac.in</p>
                 </div>
               </div>
             </div>

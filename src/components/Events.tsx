@@ -51,7 +51,7 @@ const Events: React.FC<EventsProps> = ({ onRegister }) => {
       description: "Identify the photo and explain its social relevance",
       icon: <Camera className="w-8 h-8" />,
       color: "from-teal-500 to-green-500",
-      formLink: "",
+      formLink: "https://docs.google.com/forms/d/e/1FAIpQLScwWacsjvdTwFW1dmer0Mn3K3obmDoDJwwKu1UZEUkQGWW1Ow/viewform?usp=header",
     },
     {
       name: "Handloom Harmony – Seetharamapuram Lace",
@@ -66,14 +66,14 @@ const Events: React.FC<EventsProps> = ({ onRegister }) => {
       description: "Express your creativity through drawing",
       icon: <Palette className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      formLink: "",
+      formLink: "https://docs.google.com/forms/d/e/1FAIpQLSfLD_e9cmxUCVWKzY33QpWWxdnW-lqjeecQ7Remqva3XMpQgg/viewform?usp=header",
     },
     {
       name: "Memes Presentation",
       description: "Create and share your own memes on social impact",
       icon: <Camera className="w-8 h-8" />,
       color: "from-teal-500 to-green-500",
-      formLink: "",
+      formLink: "https://docs.google.com/forms/d/e/1FAIpQLSdYamsDB8CsorEmkVa3Pr_BSvy89Sr96aTgnsuBNKKMup9YAw/viewform?usp=header",
     },
   ];
 
@@ -105,7 +105,7 @@ const Events: React.FC<EventsProps> = ({ onRegister }) => {
         "AI Effect on Society, How to prevent Cyber crimes?, Need of Entrepreneurship, Women safety",
       icon: <FileText className="w-8 h-8" />,
       color: "from-purple-500 to-violet-500",
-      formLink: "",
+      formLink: "https://docs.google.com/forms/d/e/1FAIpQLSextmj1OqocpTRu3T7ccGQWQRR0ckaTQ8t0Y0KaNqfDviiGTQ/viewform",
     },
     {
       name: "Quiz",

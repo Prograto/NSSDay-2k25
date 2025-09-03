@@ -6,7 +6,7 @@ import sitemap from 'vite-plugin-sitemap'
 export default defineConfig({
   plugins: [
     react(),
-    sitemap({ hostname: 'https://nss-day-2k25.vercel.app' }) // Add the plugin here
+    sitemap({ hostname: 'https://nss-day-2k25.vercel.app' }) 
   ],
   optimizeDeps: {
     exclude: ['lucide-react'],

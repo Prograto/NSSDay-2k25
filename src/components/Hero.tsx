@@ -101,13 +101,6 @@ const Hero: React.FC<HeroProps> = ({ onRegister }) => {
         </p>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-orange-500 rounded-full flex justify-center">
-          <div className="w-1 h-2 sm:h-3 bg-orange-500 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
-
       {/* Brochure Modal */}
       {isBrochureOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 p-4">

@@ -125,8 +125,8 @@ const Contact: React.FC = () => {
               <div className="absolute bottom-8 left-8 w-3 h-3 bg-green-500 rounded-full opacity-60 animate-bounce"></div>
               <div className="absolute top-1/3 left-4 w-2 h-2 bg-orange-400 rounded-full opacity-60 animate-ping"></div>
             </div>
-            <a href="https://www.swarnandhra.ac.in/">Our Official College Website</a>
           </div>
+          <a href="https://www.swarnandhra.ac.in/">Our Official College Website</a>
         </div>
 
         {/* Call to Action */}

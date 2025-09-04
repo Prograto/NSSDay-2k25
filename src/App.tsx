@@ -37,8 +37,8 @@ function App() {
       
       <main>
         <Hero />
-        <KeyEvents onRegister={openModal} />
         <About />
+        <KeyEvents onRegister={openModal} />
         <Events onRegister={openModal} />
         <Multimedia />
         <Contact />

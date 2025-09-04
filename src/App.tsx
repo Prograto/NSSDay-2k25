@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Calendar, Users, Award, Phone, Mail, MapPin, Play } from 'lucide-react';
+import { Menu, X, ChevronDown, Calendar, Users, Award, Phone, Mail, MapPin, Play, Key } from 'lucide-react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,6 +8,7 @@ import Multimedia from './components/Multimedia';
 import Contact from './components/Contact';
 import Modal from './components/Modal';
 import Confetti from './components/Confetti';
+import KeyEvents from './components/KeyEvents';
 
 function App() {
   const [showConfetti, setShowConfetti] = useState(false);
@@ -36,6 +37,7 @@ function App() {
       
       <main>
         <Hero />
+        <KeyEvents onRegister={openModal} />
         <About />
         <Events onRegister={openModal} />
         <Multimedia />

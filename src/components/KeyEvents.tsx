@@ -42,7 +42,7 @@ const KeyEvents: React.FC<KeyEventsProps> = ({ onRegister }) => {
   };
 
   return (
-    <section className="py-12 bg-gradient-to-br from-green-50 to-orange-50">
+    <section id="key-events" className="py-12 bg-gradient-to-br from-green-50 to-orange-50">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-green-700 mb-8">Key Events</h2>
         <div className="grid md:grid-cols-3 gap-8">

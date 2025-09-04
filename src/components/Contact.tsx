@@ -48,7 +48,8 @@ const Contact: React.FC = () => {
                     <h4 className="font-semibold text-gray-800 mb-1">Phone</h4>
                     <p className="text-gray-600">
                       J. Leela Sri Ram (NSS Secretary) - +91 63057 37463<br />
-                      Akana Sri Venkata Narasimha (Executive Member) - +91 79814 87676
+                      A. S. V. Narasimha (Executive Member) - +91 79814 87676
+                      A. Chandra Sekhar (Executive Member) - +91 8096381549
                     </p>
                   </div>
                 </div>

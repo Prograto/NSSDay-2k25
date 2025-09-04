@@ -12,7 +12,7 @@ const KeyEvents: React.FC<KeyEventsProps> = ({ onRegister }) => {
   const events = {
     main: {
       title: 'Swarnandhra Student Assembly',
-      date: 'September 25, 2025',
+      date: 'September 19, 2025',
       description:
         'A grand assembly bringing together students to discuss leadership, innovation, and community initiatives.',
       image: assembly,
@@ -22,7 +22,7 @@ const KeyEvents: React.FC<KeyEventsProps> = ({ onRegister }) => {
     side: [
       {
         title: 'Mega Blood Camp',
-        date: 'September 26, 2025',
+        date: 'September 17, 2025',
         description:
           'Join us for a life-saving blood donation drive and contribute to a healthier community.',
         image: bloodcamp,
@@ -31,7 +31,7 @@ const KeyEvents: React.FC<KeyEventsProps> = ({ onRegister }) => {
       },
       {
         title: 'Medical Camp',
-        date: 'September 27, 2025',
+        date: 'September 20, 2025',
         description:
           'A free health check-up and medical awareness camp to promote well-being in our community.',
         image: medicalcamp,
@@ -48,11 +48,11 @@ const KeyEvents: React.FC<KeyEventsProps> = ({ onRegister }) => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* LEFT MAIN POSTER */}
           <div className="md:col-span-2 bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="w-full h-[500px] overflow-hidden">
+            <div className="w-auto h-[500px] overflow-hidden">
               <img
                 src={events.main.image}
                 alt={events.main.title}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-contain object-top"
               />
             </div>
             <div className="p-6">

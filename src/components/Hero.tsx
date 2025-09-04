@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Calendar, FileText, X } from 'lucide-react';
-import brochureImg from '../images/brochure.png';
-import leftLogo from '../images/left-logo.png';
-import rightLogo from '../images/right-logo.png';
+import React, { useState, useEffect } from "react";
+import { Calendar, FileText, X, ChevronLeft, ChevronRight } from "lucide-react";
+import brochure1 from "../images/brochure.png";
+import brochure2 from "../images/assembly.png";
+import leftLogo from "../images/left-logo.png";
+import rightLogo from "../images/right-logo.png";
 
 interface HeroProps {
   onRegister: (eventName: string) => void;
@@ -10,10 +11,38 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onRegister }) => {
   const [isBrochureOpen, setIsBrochureOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const brochures = [brochure1, brochure2];
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? brochures.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === brochures.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  // 🔥 Auto-scroll effect
+  useEffect(() => {
+    if (!isBrochureOpen) return; // Only run when modal is open
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === brochures.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [isBrochureOpen, brochures.length]);
 
   return (
     <section
@@ -34,14 +63,11 @@ const Hero: React.FC<HeroProps> = ({ onRegister }) => {
         {/* Title & Logos */}
         <div className="mb-8 flex flex-col items-center">
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
-            {/* Left Logo */}
             <img
               src={leftLogo}
               alt="Left Logo"
               className="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain"
             />
-
-            {/* Title */}
             <div>
               <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-green-600 bg-clip-text text-transparent mb-2 sm:mb-4 animate-fade-in">
                 NSS DAY
@@ -50,8 +76,6 @@ const Hero: React.FC<HeroProps> = ({ onRegister }) => {
                 2025
               </div>
             </div>
-
-            {/* Right Logo */}
             <img
               src={rightLogo}
               alt="Right Logo"
@@ -60,11 +84,11 @@ const Hero: React.FC<HeroProps> = ({ onRegister }) => {
           </div>
         </div>
 
-        {/* Marquee Text */}
+        {/* Marquee */}
         <div className="mb-8 sm:mb-12 overflow-hidden bg-gradient-to-r from-orange-500 to-green-500 py-3 sm:py-4 rounded-full">
           <div className="animate-marquee whitespace-nowrap">
             {Array(4)
-              .fill('Swarnandhra Youth Assembly')
+              .fill("Swarnandhra Youth Assembly")
               .map((text, index) => (
                 <span
                   key={index}
@@ -79,13 +103,12 @@ const Hero: React.FC<HeroProps> = ({ onRegister }) => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
           <button
-            onClick={() => scrollToSection('about')}
+            onClick={() => scrollToSection("about")}
             className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
           >
             <Calendar className="w-5 h-5" />
             <span>About NSS</span>
           </button>
-
           <button
             onClick={() => setIsBrochureOpen(true)}
             className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
@@ -104,20 +127,37 @@ const Hero: React.FC<HeroProps> = ({ onRegister }) => {
       {/* Brochure Modal */}
       {isBrochureOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 p-4">
-          <div className="relative max-w-xl sm:max-w-2xl md:max-w-3xl w-full">
+          <div className="relative flex items-center justify-center">
             {/* Close Button */}
             <button
               onClick={() => setIsBrochureOpen(false)}
-              className="absolute top-2 right-2 bg-white text-black rounded-full p-2 shadow-md hover:bg-gray-200 transition"
+              className="absolute top-0 right-0 bg-white text-black rounded-full p-2 shadow-md hover:bg-gray-200 transition"
             >
               <X className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
+
+            {/* Prev Button */}
+            <button
+              onClick={handlePrev}
+              className="absolute left-2 sm:left-4 bg-white text-black rounded-full p-2 shadow-md hover:bg-gray-200 transition"
+            >
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+            </button>
+
             {/* Brochure Image */}
             <img
-              src={brochureImg}
-              alt="NSS Day 2025 Brochure"
-              className="w-full h-auto rounded-lg shadow-lg"
+              src={brochures[currentIndex]}
+              alt={`Brochure ${currentIndex + 1}`}
+              className="max-h-[80vh] max-w-[90vw] object-contain rounded-lg shadow-lg"
             />
+
+            {/* Next Button */}
+            <button
+              onClick={handleNext}
+              className="absolute right-2 sm:right-4 bg-white text-black rounded-full p-2 shadow-md hover:bg-gray-200 transition"
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+            </button>
           </div>
         </div>
       )}

@@ -4,9 +4,10 @@ import yogaimg from '../images/yoga.png'
 import independence from '../images/independence.png'
 import nssday from '../images/nssday.png'
 import republicday from '../images/republicday.png'
-import nsspost from '../images/nsspost.png'
+import nsspost from '../images/brochure.png'
 import colab from '../images/colab.png'
 import guest from '../images/guest.png'
+import nssvideo from '../images/nssday.mp4'
 
 const Multimedia: React.FC = () => {
   const highlights = [
@@ -66,7 +67,7 @@ const Multimedia: React.FC = () => {
                   poster={nsspost}
                   className="w-full h-full object-cover rounded-xl"
                 >
-                  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                  <source src={nssvideo} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>

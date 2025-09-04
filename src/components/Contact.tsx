@@ -47,8 +47,8 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Phone</h4>
                     <p className="text-gray-600">
-                      +91 63057 37463<br />
-                      +91 79814 87676
+                      J. Leela Sri Ram (NSS Secretary) - +91 63057 37463<br />
+                      Akana Sri Venkata Narasimha (Executive Member) - +91 79814 87676
                     </p>
                   </div>
                 </div>
@@ -92,13 +92,13 @@ const Contact: React.FC = () => {
                 <div className="p-4 bg-gradient-to-r from-orange-50 to-green-50 rounded-xl">
                   <h4 className="font-semibold text-gray-800">Mr. V. Manikyalarao</h4>
                   <p className="text-sm text-gray-600">NSS Programme Officer - I</p>
-                  <p className="text-sm text-orange-600">manikyalarao@swarnandhra.ac.in</p>
+                  <p className="text-sm text-orange-600">vissamanikyalarao@gmail.com</p>
                 </div>
                 
                 <div className="p-4 bg-gradient-to-r from-green-50 to-orange-50 rounded-xl">
-                  <h4 className="font-semibold text-gray-800">Mr. K. Krishnamohan</h4>
+                  <h4 className="font-semibold text-gray-800">Mr. M. V. Krishna Mohan</h4>
                   <p className="text-sm text-gray-600">NSS Programme Officer - II</p>
-                  <p className="text-sm text-green-600">krishnamohan@swarnandhra.ac.in</p>
+                  <p className="text-sm text-green-600">mv.krishnamohan@gmail.com</p>
                 </div>
               </div>
             </div>

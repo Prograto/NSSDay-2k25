@@ -114,7 +114,7 @@ const Hero: React.FC<HeroProps> = ({ onRegister }) => {
             className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
           >
             <FileText className="w-5 h-5" />
-            <span>Main Brochure</span>
+            <span>Brochure</span>
           </button>
         </div>
 
